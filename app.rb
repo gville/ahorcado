@@ -1,4 +1,5 @@
 require 'sinatra'
+require './lib/ahorcado'
 
 @@Palabra = "CIRCO"
 get '/' do
@@ -9,8 +10,10 @@ end
 post '/tomar' do
 	if (@@Palabra.include? params['letra']) == false
 		@mensaje = "LETRA NO ES COINCIDENTE"
+	else
+		@guiones = search(params['letra'])
 	end
-	
+	erb :index
 end
 
 
