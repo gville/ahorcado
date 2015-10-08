@@ -6,3 +6,7 @@ Quiero que me muestre los guiones correspodientes a la palabra a adivinar
 		Given la palabra secreta 'CIRCO'
 		Then debo ver '_ _ _ _ _'
 
+	Scenario: Usuario ingresa una letra y presiona el boton OK
+		Given que el usuario debe ingresar letra
+		When  recorre la palabra CIRCO buscando la letra "A"
+		Then debo ver 'LETRA NO ES COINCIDENTE'

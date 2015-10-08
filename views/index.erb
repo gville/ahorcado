@@ -1,5 +1,11 @@
 <html>
 	<body>
 		<%= @guiones %>
+		<br/>
+		<form name="form1" method="POST" action="tomar">
+		<input type="text" name="letra" id="letra"/>
+		<input type="submit" name="Ingresar" value="Ingresar"/>
+		</form>
+		<%= @mensaje %>
 	</body>
 </html>
